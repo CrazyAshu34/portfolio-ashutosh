@@ -1,6 +1,8 @@
 import React from "react";
 import "./Header.css";
 import profile from "../Assets/profile.png";
+import searchicon from "../Assets/searchicon.png";
+
 // import logo from "../Assets/logo.png";
 const Header = () => {
     return (
@@ -13,7 +15,7 @@ const Header = () => {
 					<li className="color1"> Home</li>
 					<li className="color2"> About Us</li>
 					<li className="color3"> Services</li>
-					<li className="color4"><span role="img" aria-label="search">🔍</span></li>
+					<li className="color4"><img className="searchicon" src={searchicon} alt="searchbar" /></li>
 				</ul>
 			</div>
 			<div className="main">
