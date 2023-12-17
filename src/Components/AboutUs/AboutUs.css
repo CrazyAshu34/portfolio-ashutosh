@@ -1,0 +1,16 @@
+.aboutus {
+    max-width: 390px;
+    margin: 0 0;
+    padding: 20px;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+p {
+    text-align: left;
+}
