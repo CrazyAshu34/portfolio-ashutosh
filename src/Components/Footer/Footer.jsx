@@ -1,9 +1,9 @@
 import React from 'react'
 import "./Footer.css"
-import instagram from "../Assets/instagram.png"
-import whatsapp from "../Assets/whatsapp.png"
-import linkedin from "../Assets/linkedin.png"
-import email from "../Assets/email.png"
+import instagram from "../../Assets/instagram.png"
+import whatsapp from "../../Assets/whatsapp.png"
+import linkedin from "../../Assets/linkedin.png"
+import email from "../../Assets/email.png"
 const Footer = () => {
     return (
         <div className="footer">
