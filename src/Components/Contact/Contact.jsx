@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import "./Contact.css";
 import walmart from "../../Assets2/walmart.png";
 import adobe from "../../Assets2/adobe.png";
@@ -8,8 +8,20 @@ import facebookicon from '../../Assets2/facebook-icon.png';
 import instagramicon from '../../Assets2/instagram.png';
 import twitericon from '../../Assets2/twitter.png';
 import youtube from '../../Assets2/youtube.png';
+import emailjs from '@emailjs/browser'; //email Emoji
 
 const Contact = () => {
+    const form = useRef(); //email form variable
+    const sendEmail = (e) => { //email function
+        e.preventDefault();
+
+        emailjs.sendForm('service_viq8t7x', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
     return (
         <section id="contactpage">
             <div id="clients">
@@ -27,7 +39,7 @@ const Contact = () => {
             <div id="contact">
                 <h1 className="contactpagetitle">Contact Me</h1>
                 <span className="contactdesc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis ea modi, soluta aperiam dignissimos voluptas?</span>
-                <form action="" className="contactform">
+                <form action="" className="contactform" ref={form} onSubmit={sendEmail}>
                     <input type="text" id="name" className="name" placeholder='Your Name' />
                     <input type="email" id="email" className="name" placeholder='Your Email' />
                     <textarea id="message" className='msg' name="message" rows="5" placeholder='Your Message'></textarea>
