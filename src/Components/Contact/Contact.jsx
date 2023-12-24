@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, { useRef } from 'react';
 import "./Contact.css";
 import walmart from "../../Assets2/walmart.png";
 import adobe from "../../Assets2/adobe.png";
@@ -15,9 +15,10 @@ const Contact = () => {
     const sendEmail = (e) => { //email function
         e.preventDefault();
 
-        emailjs.sendForm('service_viq8t7x', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+        emailjs.sendForm('service_57s68ra', 'template_wi6cpr7', form.current, 'vPCtfBMqSB9UI2Hj4')
             .then((result) => {
                 console.log(result.text);
+                e.target.reset();
             }, (error) => {
                 console.log(error.text);
             });
@@ -39,11 +40,11 @@ const Contact = () => {
             <div id="contact">
                 <h1 className="contactpagetitle">Contact Me</h1>
                 <span className="contactdesc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis ea modi, soluta aperiam dignissimos voluptas?</span>
-                <form action="" className="contactform" ref={form} onSubmit={sendEmail}>
-                    <input type="text" id="name" className="name" placeholder='Your Name' />
-                    <input type="email" id="email" className="name" placeholder='Your Email' />
+                <form className="contactform" ref={form} onSubmit={sendEmail}>
+                    <input name="user_name" type="text" id="name" className="name" placeholder='Your Name' />
+                    <input name="user_email" type="email" id="email" className="name" placeholder='Your Email' />
                     <textarea id="message" className='msg' name="message" rows="5" placeholder='Your Message'></textarea>
-                    <button type="submit" id="submit" value='send' className="submitbtn">Submit</button>
+                    <button type="submit" id="submit" value='Send' className="submitbtn">Submit</button>
                     <div className="links">
                         <img src={facebookicon} alt="" className="link" />
                         <img src={twitericon} alt="" className="link" />
