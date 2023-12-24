@@ -1,8 +1,15 @@
-* {
+/* * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: transparent;
 }
 
 
 body {
     font-family: 'Ubuntu', sans-serif;
-}
+    background-color: rgb(30, 30, 30);
+    overflow: hidden;
+    overflow-y: scroll;
+    color: white;
+} */

@@ -1,24 +1,22 @@
 import React from "react";
-import Header from "./Components/Header/Header";
-import Footer from "./Components/Footer/Footer";
-import Nopage from "./Components/Nopage/Nopage";
-import AboutUs from "./Components/AboutUs/AboutUs";
-import Home from "./Components/Home/Home";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
+import Navbar from "./Components/Navbar/Navbar";
+import Intro from "./Components/Intro/Intro";
+import Skills from "./Components/Skills/Skills";
+import Works from "./Components/Works/Works";
+import Contact from "./Components/Contact/Contact";
+import Footer from "./Components/Footer/Footer";
+// import Nopage from "./Components/Nopage/Nopage";
 
 export default function App() {
   return (
     <div className="App">
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/AboutUs" element={<AboutUs />} />
-          <Route path="*" element={<Nopage />} />
-        </Routes>
-        <Footer />
-      </Router>
+      <Navbar />
+      <Intro />
+      <Skills />
+      <Works />
+      <Contact />
+      <Footer />
     </div>
   );
 }

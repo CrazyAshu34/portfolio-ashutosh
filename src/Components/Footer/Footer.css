@@ -1,21 +1,10 @@
 .footer {
+    width: 100vw;
+    height: 4rem;
+    background: rgb(40, 40, 40);
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background-color: #1efdfd3f;
-    width: 100%;
-    height: auto;
-    bottom: 0;
-}
-
-.iconparent {
-    display: flex;
-    flex-direction: row;
-}
-
-.icon {
-    width: 30px;
-    height: 30px;
-    margin: 5px 5px;
-    cursor: pointer;
+    font-weight: 300;
+    font-size: small;
 }
