@@ -1,11 +1,12 @@
-import React from 'react'
-import "./Footer.css"
+import React from 'react';
+import "./Footer.css";
+
 const Footer = () => {
     return (
         <footer className="footer">
-            Copyright &#169; 2023 Ashutosh Singh Williams. All right received.
+            Copyright &#169; 2023 Ashutosh Singh. All rights reserved.
         </footer>
-    )
+    );
 }
 
-export default Footer
+export default Footer;

@@ -6,7 +6,6 @@ import Skills from "./Components/Skills/Skills";
 import Works from "./Components/Works/Works";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
-// import Nopage from "./Components/Nopage/Nopage";
 
 export default function App() {
   return (

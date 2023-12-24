@@ -8,28 +8,31 @@ import facebookicon from '../../Assets2/facebook-icon.png';
 import instagramicon from '../../Assets2/instagram.png';
 import twitericon from '../../Assets2/twitter.png';
 import youtube from '../../Assets2/youtube.png';
-import emailjs from '@emailjs/browser'; //email Emoji
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-    const form = useRef(); //email form variable
-    const sendEmail = (e) => { //email function
+    const form = useRef();
+
+    const sendEmail = (e) => {
         e.preventDefault();
 
         emailjs.sendForm('service_57s68ra', 'template_wi6cpr7', form.current, 'vPCtfBMqSB9UI2Hj4')
             .then((result) => {
                 console.log(result.text);
+                alert("Message sent Successfully")
                 e.target.reset();
             }, (error) => {
                 console.log(error.text);
             });
     };
+
     return (
         <section id="contactpage">
             <div id="clients">
                 <h1 className="contactpagetitle">My Clients</h1>
             </div>
             <p className="clientsdesc">
-                Description ipsum dolor sit amet consectetur adipisicing elit. Eligendi quasi reiciendis, dolor vel repellendus consequatur saepe deleniti alias eos rerum!
+                "I'm eager to work with these awesome clients who appreciate my skills."
             </p>
             <div className="myclintimgs">
                 <img src={walmart} alt="clients" className="clientimg" />
@@ -39,7 +42,7 @@ const Contact = () => {
             </div>
             <div id="contact">
                 <h1 className="contactpagetitle">Contact Me</h1>
-                <span className="contactdesc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis ea modi, soluta aperiam dignissimos voluptas?</span>
+                <span className="contactdesc">Want to chat? Drop me a message!</span>
                 <form className="contactform" ref={form} onSubmit={sendEmail}>
                     <input name="user_name" type="text" id="name" className="name" placeholder='Your Name' />
                     <input name="user_email" type="email" id="email" className="name" placeholder='Your Email' />

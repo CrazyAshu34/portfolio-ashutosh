@@ -43,18 +43,19 @@
     font-size: medium;
     padding: 0px 1rem;
     padding-right: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
 }
 
-.navbutton:hover {
-    background-color: #ffffff;
-
+.navbutton:active {
+    background-color: #dddddd;
 }
 
 .logo {
     object-fit: cover;
-    height: 3rem;
-    width: 4rem;
+    width: 6rem;
 }
+
 
 .active {
     color: yellow;
