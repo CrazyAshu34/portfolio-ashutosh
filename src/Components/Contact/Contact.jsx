@@ -16,6 +16,15 @@ const Contact = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
+        const name = e.target.user_name.value;
+        const email = e.target.user_email.value;
+        const message = e.target.message.value;
+
+        if (!name || !email || !message) {
+            alert("Please fill in all fields before submitting.");
+            return;
+        }
+
         emailjs.sendForm('service_57s68ra', 'template_wi6cpr7', form.current, 'vPCtfBMqSB9UI2Hj4')
             .then((result) => {
                 console.log(result.text);
@@ -49,10 +58,18 @@ const Contact = () => {
                     <textarea id="message" className='msg' name="message" rows="5" placeholder='Your Message'></textarea>
                     <button type="submit" id="submit" value='Send' className="submitbtn">Submit</button>
                     <div className="links">
-                        <img src={facebookicon} alt="" className="link" />
-                        <img src={twitericon} alt="" className="link" />
-                        <img src={youtube} alt="" className="link" />
-                        <img src={instagramicon} alt="" className="link" />
+                        <a href="https://www.instagram.com/ashu_singhaniaa/" target="_blank" rel="noopener noreferrer">
+                            <img src={instagramicon} alt="Instagram" className="link" />
+                        </a>
+                        <a href="https://www.youtube.com/channel/UC95cZyHavnNxfZKvRqsmDQQ" target="_blank" rel="noopener noreferrer">
+                            <img src={youtube} alt="YouTube" className="link" />
+                        </a>
+                        <a href="https://twitter.com/AshutoshfastAF" target="_blank" rel="noopener noreferrer">
+                            <img src={twitericon} alt="Twitter" className="link" />
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100071644302351" target="_blank" rel="noopener noreferrer">
+                            <img src={facebookicon} alt="Facebook" className="link" />
+                        </a>
                     </div>
                 </form>
             </div>
