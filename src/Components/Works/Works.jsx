@@ -47,18 +47,14 @@ const Works = () => {
                 </a>
 
                 <a
-                    href="/"
+                    href="https://crazyashu34.github.io/TODO-LIST-REACT/"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
                     <img src={Portfolio5} alt="" className="worksimg" />
                 </a>
 
-                <a
-                    href="https://crazyashu34.github.io/TODO-LIST-REACT/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <a href="/" target="_blank" rel="noopener noreferrer">
                     <img src={Portfolio6} alt="" className="worksimg" />
                 </a>
             </div>
